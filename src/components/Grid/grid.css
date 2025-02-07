@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@100..900&family=Poiret+One&display=swap");
+
+/* Full Page Centered Layout */
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the grid */
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: "Poiret One", cursive;
+  text-align: center;
+}
+
+/* Title Image */
+.title-image {
+  width: auto;
+  height: 38px;
+  margin-left: 40px; /* Left-aligned */
+  margin-bottom: 20px;
+  margin-top: -50px;
+  display: block;
+  align-self: flex-start; /* Keeps it aligned left */
+}
+
+/* Grid Layout - 2 per row */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(350px, 1fr)); /* 2 per row */
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 1024px;
+  margin: 50px auto;
+}
+
+/* Grid Items - Taller With Spacing */
+.grid-item {
+  width: 100%;
+  max-width: 480px; /* Slightly wider */
+  height: 280px; /* Increased height */
+  padding: 35px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Hover Effect */
+.grid-item:hover {
+  background-color: white !important;
+  color: #007bff !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Circular Image Container */
+.image-circle {
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  top: 15px;
+}
+
+/* Trophy Image */
+.image-circle img {
+  width: 60%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Grid Title */
+.grid-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 2px; /* Added spacing from image */
+  margin-bottom: 8px; /* Spacing between title and text */
+  font-family: Arial, sans-serif; /* Changed font */
+}
+
+/* Grid Text */
+.grid-text {
+  font-size: 18px;
+  font-weight: 800;
+  color: black;
+  text-align: center;
+  padding: 0 20px;
+  line-height: 1.5; /* Improved readability */
+}
+
+/* Circular Image Container */
+.image-circle {
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  top: 15px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover Effect for Circular Image */
+.image-circle.hovered {
+  background-color: blue;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(300px, 1fr)); /* 2 per row */
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1 per row */
+  }
+
+  .grid-item {
+    max-width: 100%;
+    height: 300px; /* Adjusted height for readability */
+  }
+  .grid-title {
+    font-size: 20px;
+    margin-top: 2px; /* Maintain proper spacing */
+    margin-bottom: 10px; /* Small gap between title and text */
+    text-align: center; /* Ensures it looks good on small screens */
+  }
+
+  .title-image {
+    width: auto;
+    height: 30px;
+    margin-left: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr; /* Single column */
+    gap: 15px; /* Reduced gap for smaller screens */
+  }
+
+  .grid-item {
+    width: 100%;
+    height: 320px; /* Slightly increased height for better spacing */
+  }
+
+  .title-image {
+    margin-top: -220px;
+    width: auto;
+    height: 20px; /* Smaller size for title image */
+  }
+
+  .grid-title {
+    font-size: 20px;
+    margin-bottom: 10px; /* Small gap between title and text */
+    text-align: center; /* Ensures it looks good on small screens */
+  }
+
+  .grid-text {
+    font-size: 14px; /* Adjusted for readability */
+    padding: 0 10px; /* Less padding to fit text properly */
+    font-weight: 800;
+  }
+}
+
+@media (max-width: 320px) {
+  .grid {
+    grid-template-columns: 1fr; /* Single column */
+    gap: 15px; /* Reduced gap for smaller screens */
+  }
+
+  .grid-item {
+    width: 100%;
+    height: 320px; /* Same height as 480px breakpoint */
+  }
+
+  .title-image {
+    width: auto;
+    height: 20px; /* Same size as 480px */
+  }
+
+  .grid-title {
+    font-size: 20px;
+    margin-top: -5px; /* Same negative margin */
+    margin-bottom: 10px; /* Same spacing */
+    text-align: center;
+  }
+
+  .grid-text {
+    font-size: 14px;
+    padding: 0 10px;
+    font-weight: 800;
+  }
+}
+

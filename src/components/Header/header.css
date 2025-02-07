@@ -1,0 +1,185 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling with gradient background */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #F2F2F2, #98CADE, #0A8ABE);
+    position: relative;
+    height: 90px;
+    padding-right: 50px;
+}
+
+/* Logo styling */
+.logo img {
+    height: 80px; /* Adjust as needed to fit the header */
+}
+
+/* Navbar styling */
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 40px; /* Gap between menu items */
+}
+
+/* List items */
+.navbar li {
+    position: relative;
+}
+
+/* Links styling */
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    border-radius: 5px; /* Adjust border radius for smooth corners */
+    transition: background-color 0.3s ease;
+    font-family: Arial, sans-serif; /* Added Arial font for the links */
+}
+
+/* Hover effect */
+.navbar a:hover {
+    background-color: #98CADE; /* Matches hover color closer to image */
+    color: white;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #F3EDF7;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0; /* Padding for dropdown */
+    width: 240px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+/* Dropdown items styling */
+.dropdown-menu li {
+    text-align: left; /* Align text to left */
+}
+
+.dropdown-menu li a {
+    padding: 10px 20px;
+    font-size: 18px;
+    display: block;
+    color: #333;
+    transition: background-color 0.3s ease;
+    font-family: Arial, sans-serif; /* Added Arial font for dropdown items */
+}
+
+/* Hover effect for dropdown */
+.dropdown-menu li a:hover {
+    background-color: #98CADE;
+    color: white;
+}
+
+/* Show dropdown when active */
+.dropdown.active .dropdown-menu {
+    display: block;
+}
+
+/* Caret styling */
+.caret {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate caret on dropdown active */
+.dropdown.active .caret {
+    transform: rotate(180deg);
+}
+
+/* Mobile and Tablet View */
+@media (max-width: 1024px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 240px; /* Adjust to match dropdown width */
+        background-color: #F3EDF7; /* Match dropdown background color */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        z-index: 1000; /* Ensure it's above other elements */
+        gap: 10px;
+    }
+
+    /* Mobile Menu - hamburger icon */
+    .mobile-menu-icon {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .mobile-menu-icon i {
+        font-size: 30px;
+    }
+
+    .mobile-menu-icon .hamburger {
+        width: 30px;
+        height: 3px;
+        background-color: #333;
+        transition: all 0.3s ease;
+    }
+
+    /* Display navbar when active */
+    .navbar.active {
+        display: flex;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    /* Adjust list items in mobile view */
+    .navbar li {
+        margin: 0;
+    }
+
+    /* Ensure the mobile menu has the same padding and hover effect as the dropdown */
+    .navbar a {
+        padding: 10px 20px; /* Same as dropdown padding */
+        font-size: 18px; /* Adjust font size to match dropdown */
+        color: #333;
+        transition: background-color 0.3s ease;
+        background-color: #F3EDF7; /* Match dropdown background */
+        text-align: center;
+        font-family: Arial, sans-serif; /* Added Arial font for mobile links */
+    }
+
+    /* Hover effect for mobile menu */
+    .navbar a:hover {
+        background-color: #98CADE; /* Match hover effect */
+        color: white;
+    }
+
+    /* Caret adjustments for mobile */
+    .dropdown-menu li a {
+        padding: 10px 0;
+    }
+}
